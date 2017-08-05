@@ -23,19 +23,19 @@ Run in your console `composer update` command to pull down the latest version of
 Or just run this in console:
 
 ```php
-composer require sngrl/sphinxsearch:dev-master
+composer require evgarik/sphinxsearch:dev-master
 ```
 
 After updating composer, add the ServiceProvider in bootstrap/app.php:
 
 ```php
-	$app->register ( sngrl\SphinxSearch\SphinxSearchServiceProvider::class );
+$app->register ( evgarik\SphinxSearch\SphinxSearchServiceProvider::class );
 ```
 
 You can add this line to the files, where you may use SphinxSearch:
 
 ```php
-use sngrl\SphinxSearch\SphinxSearch;
+use evgarik\SphinxSearch\SphinxSearch;
 ```
 
 Configuration
