@@ -1,7 +1,7 @@
-Sphinx Search for Laravel 5 - Custom build with snippets support 
+Sphinx Search for Lumen 5 - Custom build with snippets support 
 =======================
-Simple Laravel 5 package for make queries to Sphinx Search.
-Inspired by scalia/sphinxsearch package for Laravel 4.
+Simple Lumen 5 package for make queries to Sphinx Search.
+Based in sngrl/sphinxsearch
 
 This package was created to import to the site packagist.org and allow installation through Composer (https://getcomposer.org/).
 
@@ -13,7 +13,7 @@ Require this package in your composer.json:
 ```php
 	"require": {
         /*** Some others packages ***/
-		"sngrl/sphinxsearch": "dev-master",
+		"evgarik/sphinxsearch": "dev-master",
 	},
 ```
 
@@ -26,13 +26,10 @@ Or just run this in console:
 composer require sngrl/sphinxsearch:dev-master
 ```
 
-After updating composer, add the ServiceProvider to the "providers" array in config/app.php:
+After updating composer, add the ServiceProvider in bootstrap/app.php:
 
 ```php
-	'providers' => array(
-        /*** Some others providers ***/
-        'sngrl\SphinxSearch\SphinxSearchServiceProvider',
-    ),
+	$app->register ( sngrl\SphinxSearch\SphinxSearchServiceProvider::class );
 ```
 
 You can add this line to the files, where you may use SphinxSearch:
